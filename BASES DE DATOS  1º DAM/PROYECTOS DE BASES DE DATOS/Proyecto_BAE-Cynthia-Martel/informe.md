@@ -134,7 +134,7 @@ A continuación, se representa el corrrespondiente modelo conceptual desarrollad
 # 4. Modelo Relacional
 Gracias al modelo conceptual, que fue diseñado, explicado y representado gráficamente con la ayuda de herramientas como Draw.io en el apartado anterior, podemos entender las entidades del sistema y sus relaciones a un nivel básico. 
 
-El modelo conceptual, nos sirve de referencia para construir posteriormente el modelo relacional. Esto nos ayuda a preparar su implementación en un sistema de gestión de base de datos como lo es MySQL, con el que hemos procedido a trabajar. 
+El modelo conceptual, nos sirve de referencia para construir posteriormente el modelo relacional. Esto nos ayuda a preparar su implementación en un sistema de gestión de base de datos como lo es *MySQL*, con el que hemos procedido a trabajar. 
 
 En el modelo relacinoal, definimos las llamadas tablas con sus claves primarias (PK) y también, sus claves foráneas (FK).
 
@@ -162,7 +162,8 @@ Se despliega en esta página, una imagen del modelo relacional de la base de dat
 
 Este diagrama es una representación gráfica avanzada de la base de datos que nos incumbe, mostrando de manera visual las entidades, atributos, relaciones, claves primarias y claves foráneas, además de conceptos más complejos como herencias y jerarquías.
 
-![Modelo Relacional](3.jpg)
+![Modelo Relacional](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_Gesti%C3%B3nCompra_GlobalMart.png)
+
 
 # 5. Implementación en MySQL
 🧰 Una vez definido el modelo conceptual y transformado a su correspondiente modelo relacional, se procede a su implementación en MySQL. Para ello, se emplea el software MySQL Workbench, como pilar fundamental en la optimización del sistema de gestión de compras de la empresa GlobalMart Ltd. 
