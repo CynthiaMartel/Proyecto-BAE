@@ -1,5 +1,5 @@
 # Portada
-![Portada del proyecto](../recursos/Portada_Proyecto.jpj)
+![Portada del proyecto](../recursos/Portada_Proyecto.jpg)
 
 
 ## Índice
