@@ -219,20 +219,20 @@ Procedimos a la inserción de datos en la base de datos gestionCompraGlobalMart 
 ![Insertando datos de prueba en base de datos](6.jpg)
 ![Insertando datos de prueba en base de datos](7.jpg)
 
-#6. Consultas Propuestas
+# 6. Consultas Propuestas
 
 📌 Una vez realizada la inserción de datos en las diferentes tablas de la base de datos gestionCompraGlobalMart, procedimos a la ejecución de diferentes consultas SQL con el objetivo de manipular, a forma de prueba, la información disponible, así como su analisis correspondiente.
 
 A continuación se propone una lista de consultas realizadas, y se adjunta capturas de pantalla con algunos de los ejemplos de estas. Hay más ejemplos en la carpeta de scripts de este proyecto, además de las que aquí se muestra.
 
-##1. Consultas básicas con SELECT
+## 1. Consultas básicas con SELECT
 Las consultas básicas permiten visualizar información específica de una o varias tablas. Son esenciales para la verificación de datos y la toma de decisiones.
 
 Ejemplo de utilidad: En este caso, hicimos una verificación del listado de productos disponibles junto con su precio y stock para evaluar disponibilidad. 
 
 ![Consultas básicas con select](8.jpg)
 
-##2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
+## 2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
 Este tipo de consultas nos ayuda a mantener una integridad y actualización de la base de datos. 
 
 Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) el número de unidades disponibles de un producto tras su venta. Eliminar (DELETE) un proveedor que ya no colabora con la empresa.
@@ -241,73 +241,73 @@ Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) e
 ![Consultas UPDATE](10.jpg)
 ![Consultas DELATE](11.jpg)
 
-##3. Consultas con JOIN
+## 3. Consultas con JOIN
 El uso de JOIN es clave para relacionar datos entre diferentes tablas. Permiten cruzar información de productos, proveedores y pedidos para obtener una visión más completa del sistema.
 
 Ejemplo de utilidad: Saber qué proveedor suministró un producto vendido en un pedido específico.
 
 ![Consultas JOIN](11.jpg)
 
-##4. Consultas con WHERE
+## 4. Consultas con WHERE
 Aunque ya se ha visto su uso en las consultas de los anteriores apartados, merecen una mención especial, ya que, precisamente, permiten filtrar los datos según condiciones determinadas. Son fundamentales para localizar registros específicos.
 
 Ejemplo de utilidad: Obtener los productos cuyo stock está por debajo de un cierto umbral para planificar reabastecimiento.
 
 ![Consultas WHERE](11.jpg)
 
-##5. Consultas con ORDER BY
+## 5. Consultas con ORDER BY
 Ordenan los resultados según un criterio, como precio, nombre o fecha. Esto facilita la visualización y el análisis.
 
 Ejemplo de utilidad: Listar productos del más barato al más caro.
 
 ![Consultas ORDER BY](12.jpg)
 
-##6. Consultas con fechas
+## 6. Consultas con fechas
 El manejo de fechas es esencial para realizar seguimientos temporales, como analizar entregas o pedidos en un rango determinado.
 
 ![Consultas DATE](13.jpg)
 
 Ejemplo de utilidad: Ver todos los pedidos realizados durante el mes de marzo de 2025, o alguna fecha específica.
 
-##7. Consultas con funciones agregadas y GROUP BY
+## 7. Consultas con funciones agregadas y GROUP BY
 Permiten agrupar datos y realizar cálculos como sumas, promedios o conteos.
 
 Ejemplo de utilidad: Calcular el importe total generado por cada pedido.
 
 ![Consultas GROUP BY](14.jpg)
 
-##8. Consultas con RANK y uso analítico
+## 8. Consultas con RANK y uso analítico
 Las funciones analíticas como RANK() permiten clasificar los datos según criterios definidos, muy útiles en análisis comparativos.
 
 Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
 
 ![Consultas RANK](15.jpg)
 
-#7.Ampliación de la base de datos 
+# 7.Ampliación de la base de datos 
 
 A continuación se exponen algunas mejoras y ampliaciones, implementadas en el contexto de la empresa de la empresa de GlobalMart Ldt.
 
-##1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
+## 1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
 Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
 ![tabla cerificacionEcologica](16.jpg)
 
-##2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
+## 2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
 
 Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
 
 ![tabla impactoambiental](17.jpg)
 
-##3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
+## 3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
 
 ![tabla cliente](18.jpg)
 
-##4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
+## 4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
 Esto supone una relación entre categoria y producto de uno a muchos (N:N).
 
 ![tabla categoria](19.jpg)
 
-##5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
+## 5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
 
 Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
 En este caso, hemos determinado que un stockage bajo significarán aquellos que tienen menos de 100 unidades disponibles en inventario.
@@ -323,7 +323,7 @@ Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo 
 
 # 8. Vistas y Triggers 
 
-##Triggers 🔧
+## Triggers 🔧
 
 Un *Trigger*, en resuemen, es un bloque de código automático que se ejecuta cuando ocurre un evento en una tabla. Esto es, por ejemplo INSERT, UPDATE o DELETE. Los Triggers se utilizan para:
 
@@ -357,7 +357,7 @@ Para ello creamos la vista *“vistaResumenComprasClientes”*.
 ![Vistas](22.jpg)
 
 
-#9. Pruebas y validaciones
+# 9. Pruebas y validaciones
 
 Se han realizado una serie de acciones para asegurar que la base de datos de GlobalMart sea coherente y consistente, esté integrada, y cumpla con la integridad, tanto de referencia, escalabilidad y optimización, para que pueda ejecutarse de manera eficaz. 
 
@@ -374,24 +374,24 @@ A modo de resumen, se ha implementado lo siguiente:
 - *Pruebas de integridad*: Todos los campos se ajustaron a su contexto, evitando ambigüedades. Se realizaron pruebas de inserción (INSERT) y actualización de datos (UPDATE), validando que las relaciones y restricciones funcionaran correctamente.
 
 
-#10. Conclusiones
+# 10. Conclusiones
 
 El proceso de desarrollo de la base de datos de GlobalMart ha sido un proyecto integral que abarca desde la planificación inicial hasta la implementación avanzada, mejorando tanto la estructura de datos como la eficiencia operativa de la gestión comercial. El proceso se puede dividir en varias fases clave, que incluyeron:
 
-##1- Creación del Modelo Conceptual y Modelo Relacional: Se identificaron las entidades clave (proveedores, productos, pedidos, clientes) y sus relaciones, transformándolas en un modelo relacional con tablas como proveedor, producto, y cliente, utilizando claves foráneas para mantener la integridad referencial.
+## 1- Creación del Modelo Conceptual y Modelo Relacional: Se identificaron las entidades clave (proveedores, productos, pedidos, clientes) y sus relaciones, transformándolas en un modelo relacional con tablas como proveedor, producto, y cliente, utilizando claves foráneas para mantener la integridad referencial.
 
-##2-La implementación en MySQL trabajando con el software MySQL Workbrench: Se creó la base de datos en MySQL, insertando datos iniciales para visualizar y comprobar el buen funcionamiento de la tienda y validar las relaciones creadas.
+## 2-La implementación en MySQL trabajando con el software MySQL Workbrench: Se creó la base de datos en MySQL, insertando datos iniciales para visualizar y comprobar el buen funcionamiento de la tienda y validar las relaciones creadas.
 
-##3-La implementación de ampliación de la base de datos inicial y mejora de esta: Se añadieron funcionalidades para mejorar la trazabilidad y análisis, como tablas para certificaciones ecológicas, impacto ambiental, clientes y categorías de productos.
+## 3-La implementación de ampliación de la base de datos inicial y mejora de esta: Se añadieron funcionalidades para mejorar la trazabilidad y análisis, como tablas para certificaciones ecológicas, impacto ambiental, clientes y categorías de productos.
 
-##4-Implementación de triggers y vistas, como características avanzadas para una mejora eficaz en el manejo de los datos: 
+## 4-Implementación de triggers y vistas, como características avanzadas para una mejora eficaz en el manejo de los datos: 
 Vistas: Se crearon vistas para identificar productos con bajo stock y proporcionar resúmenes de compras por cliente, facilitando la gestión de inventarios y marketing.
 Triggers: Se implementaron triggers para actualizar el stock automáticamente y evitar ventas con stock negativo, mejorando la automatización y evitando errores.
 
 ## Mejoras y Futuro  💾
 Con el uso de vistas, triggers y la ampliación de la base de datos, el sistema de gestión de compras ha sido fortalecido, y ahora es más robusto para adaptarse a futuras ampliaciones y necesidades. Se espera que este sistema sea una herramienta eficaz para la gestión del inventario, la automatización de procesos y la toma de decisiones estratégicas para el crecimiento de GlobalMart.
 
-#10. Anexos
+# 10. Anexos
 ## 1- Análisis de posibles mejoras futuras 📝
 Aunque la base de datos de GlobalMart está optimizada para cumplir con las necesidades actuales, sería conveniente explorar áreas de mejora para asegurar que el sistema continúe siendo robusto, escalable y adecuado a las futuras demandas del negocio. A continuación, se dan algunos detalles de las principales áreas de mejora:
 
