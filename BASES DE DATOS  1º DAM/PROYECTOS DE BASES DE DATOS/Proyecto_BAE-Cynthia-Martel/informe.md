@@ -81,7 +81,7 @@ Se presenta a continuación, un análisis de las entidades clave que compondrá 
 1. *Proveedor*
 Información sobre las empresas o personas que suministran productos.
 
--idProveedor (PK): Identificador único del proveedor.
+- 🆔idProveedor (PK): Identificador único del proveedor.
 -nombre: Nombre del proveedor o empresa.
 -numeroTelefono: Teléfono de contacto del proveedor.
 -direccion: Dirección postal del proveedor.
@@ -90,40 +90,40 @@ Información sobre las empresas o personas que suministran productos.
 2. *Producto*
 Datos sobre los productos gestionados por la empresa.
 
--idProducto (PK): Identificador único del producto.
--nombre: Nombre del producto.
--descripcion: Detalle o información adicional sobre el producto.
--precio: Precio unitario del producto.
--stock: Cantidad disponible en almacén.
--categoria: Clasificación del producto (ej. electrónica, hogar, etc.).
--id_Proveedor (FK): Clave foránea que relaciona el producto con su proveedor.
+- 🆔 idProducto (PK): Identificador único del producto.
+- 🏷️ nombre: Nombre del producto.
+- 🏷️ descripcion: Detalle o información adicional sobre el producto.
+- 🏷️ precio: Precio unitario del producto.
+- 🏷️ stock: Cantidad disponible en almacén.
+- 🏷️ categoria: Clasificación del producto (ej. electrónica, hogar, etc.).
+- 📚 id_Proveedor (FK): Clave foránea que relaciona el producto con su proveedor.
 
 3. *Pedido*
 Registro de cada compra realizada a un proveedor.
 
--idPedido (PK): Identificador único del pedido.
--fechaPedido: Fecha en la que se realizó el pedido.
--fechaEntrega: Fecha estimada o real de entrega del pedido.
--estadoPedido: Estado actual del pedido (pendiente, enviado, entregado, etc.).
--importeTotal: Monto total del pedido (calculado sumando los subtotales de los productos).
+- 🆔idPedido (PK): Identificador único del pedido.
+- 🏷️fechaPedido: Fecha en la que se realizó el pedido.
+- 🏷️fechaEntrega: Fecha estimada o real de entrega del pedido.
+- 🏷️estadoPedido: Estado actual del pedido (pendiente, enviado, entregado, etc.).
+- 🏷️importeTotal: Monto total del pedido (calculado sumando los subtotales de los productos).
 
 4. *DetallePedido*
 Entidad intermedia para representar los productos incluidos en un pedido (relación muchos a muchos).
 
--idDetallePedido (PK): Identificador único del detalle del pedido.
--id_Pedido (FK): Clave foránea que relaciona con el pedido correspondiente.
--id_Producto (FK): Clave foránea que relaciona con el producto correspondiente.
--cantidadSolicitada: Cantidad de unidades pedidas de ese producto.
--precioUnitario: Precio del producto en el momento del pedido.
--subtotal: Resultado de multiplicar la cantidad solicitada por el precio unitario.
+- 🆔 idDetallePedido (PK): Identificador único del detalle del pedido.
+- 📚 id_Pedido (FK): Clave foránea que relaciona con el pedido correspondiente.
+- 📚 id_Producto (FK): Clave foránea que relaciona con el producto correspondiente.
+- 🏷️ cantidadSolicitada: Cantidad de unidades pedidas de ese producto.
+- 🏷️ precioUnitario: Precio del producto en el momento del pedido.
+- 🏷️ subtotal: Resultado de multiplicar la cantidad solicitada por el precio unitario.
 
 ## Relaciones entre Entidades 🔗
 Para el funcionamiento de las tablas, estas necesitan de relaciones entre ellas. Estas son las relaciones princpales que completan el modelo conceptual:
--*(Proveedor – Producto)* 1:N : Un proveedor TIENE muchos productos, pero cada producto tiene un solo proveedor → relación 1:N entre Proveedor y Producto. 
+- *(Proveedor – Producto)* 1:N : Un proveedor TIENE muchos productos, pero cada producto tiene un solo proveedor → relación 1:N entre Proveedor y Producto. 
 
--*(Producto- Pedido)* N:1 : Un producto CONTIENE varios pedidos, pero cada pedido corresponde a un solo producto  → relación N:1 entre Pedido y Proveedor. 
+- *(Producto- Pedido)* N:1 : Un producto CONTIENE varios pedidos, pero cada pedido corresponde a un solo producto  → relación N:1 entre Pedido y Proveedor. 
 
--*(Producto - Pedido - DetallePedido)* N:M Un pedido TIENE varios productos y cada producto puede estar en varios pedidos → relación N:M, resuelta con la entidad DetallePedido. 
+- *(Producto - Pedido - DetallePedido)* N:M Un pedido TIENE varios productos y cada producto puede estar en varios pedidos → relación N:M, resuelta con la entidad DetallePedido. 
 
 ## *Modelo Conceptual gráfico con draw io* 🔍
 A continuación, se representa el corrrespondiente modelo conceptual desarrollado en Draw.io. De esta manera, se puede visualizar de manera gráfica, las entidades clave del sistema de gestión de compra de la empresa GlobalMart Ldt., donde se dibujan las entidades principales, sus atributos y las relaciones entre ellas.
@@ -172,24 +172,24 @@ A continuación, se detallan los elementos esenciales de dicho proceso, con la f
 
 ##  Entendiendo los elementos esenciales del proceso 🔎
 
--Para desarrollar la base de datos, utilizamos *SQL* (Structured Query Language), un lenguaje estándar empleado en la gestión de bases de datos relacionales. Este lenguaje permite definir la estructura de los datos mediante la creación de tablas, así como realizar consultas, inserciones, modificaciones y eliminaciones, además de establecer relaciones entre las distintas entidades del sistema.
+- Para desarrollar la base de datos, utilizamos *SQL* (Structured Query Language), un lenguaje estándar empleado en la gestión de bases de datos relacionales. Este lenguaje permite definir la estructura de los datos mediante la creación de tablas, así como realizar consultas, inserciones, modificaciones y eliminaciones, además de establecer relaciones entre las distintas entidades del sistema.
 
--Asimismo, trabajamos con *MySQL*, un sistema de gestión de bases de datos relacional (RDBMS) que funciona como motor o servidor. Este sistema recibe instrucciones escritas en SQL y responde mediante la recuperación o manipulación de los datos almacenados.
+- Asimismo, trabajamos con *MySQL*, un sistema de gestión de bases de datos relacional (RDBMS) que funciona como motor o servidor. Este sistema recibe instrucciones escritas en SQL y responde mediante la recuperación o manipulación de los datos almacenados.
 
--Ambos conceptos se integran en el entorno de *MySQL Workbench*, una herramienta con interfaz gráfica desarrollada por Oracle que facilita el trabajo con bases de datos MySQL. Esta aplicación permite diseñar esquemas de manera visual, redactar y ejecutar consultas SQL, administrar usuarios y permisos, así como exportar modelos conceptuales a scripts SQL. A propósito de ello, gracias a esta herramienta, fue posible elaborar el modelo relacional y generar el diagrama EER que se presentó en la página anterior a esta.
+- Ambos conceptos se integran en el entorno de *MySQL Workbench*, una herramienta con interfaz gráfica desarrollada por Oracle que facilita el trabajo con bases de datos MySQL. Esta aplicación permite diseñar esquemas de manera visual, redactar y ejecutar consultas SQL, administrar usuarios y permisos, así como exportar modelos conceptuales a scripts SQL. A propósito de ello, gracias a esta herramienta, fue posible elaborar el modelo relacional y generar el diagrama EER que se presentó en la página anterior a esta.
 
 Es importante, por otro lado, tener en cuenta los tipos de datos seleccionados. Estos se han ajustados a las necesidades de la empresa y se han pensado para trabajar en una base de datos con mayor eficacia y manejabilidad. Se hace un resumen de estos, en el siguiente apartado.
 
 ## Tipos de datos seleccionados 📦
--*varchar*: utilizado en campos de texto de longitud variable. Concretamente en: `nombre`, `email`, `numeroTelefono`, `direccion`, `categoria` o `estadoPedido`. innecesario si el texto es corto.
+- *varchar*: utilizado en campos de texto de longitud variable. Concretamente en: `nombre`, `email`, `numeroTelefono`, `direccion`, `categoria` o `estadoPedido`. innecesario si el texto es corto.
 
--*text*: aplicado al campo `descripcion` en la tabla `producto`, adecuado para permitir descripciones más extensas.
+- *text*: aplicado al campo `descripcion` en la tabla `producto`, adecuado para permitir descripciones más extensas.
 
--*decimal*(10,2): utilizado en campos de tipo monetario como `precio`, `importeTotal`, `precioUnitario` y `subtotal`, evitando errores de redondeo asociados a tipos como float.
+- *decimal*(10,2): utilizado en campos de tipo monetario como `precio`, `importeTotal`, `precioUnitario` y `subtotal`, evitando errores de redondeo asociados a tipos como float.
 
--*int*(11): elegido para claves primarias (`idProducto`, `idProveedor`, `idPedido`, `idDetallePedido`), claves foráneas y campos de cantidad (`stock`, `cantidadSolicitada`). Permite trabajar con valores numéricos enteros, adecuados para identificadores y conteo.
+- *int*(11): elegido para claves primarias (`idProducto`, `idProveedor`, `idPedido`, `idDetallePedido`), claves foráneas y campos de cantidad (`stock`, `cantidadSolicitada`). Permite trabajar con valores numéricos enteros, adecuados para identificadores y conteo.
 
--*date*: utilizado en los campos `fechaPedido` y `fechaEntrega`, apropiado para almacenar fechas sin incluir la hora, lo cual es suficiente en este contexto.
+- *date*: utilizado en los campos `fechaPedido` y `fechaEntrega`, apropiado para almacenar fechas sin incluir la hora, lo cual es suficiente en este contexto.
 
 ⚙️ Además, se optó por el motor de almacenamiento *InnoDB*, y por la codificación *utf8mb4*, adecuada para representar correctamente cualquier carácter, incluyendo símbolos especiales y emojis.
 
@@ -327,11 +327,11 @@ Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo 
 
 Un *Trigger*, en resuemen, es un bloque de código automático que se ejecuta cuando ocurre un evento en una tabla. Esto es, por ejemplo INSERT, UPDATE o DELETE. Los Triggers se utilizan para:
 
--Automatizar procesos, como puede ser actualizar un stock automáticamnete tras que se realice un pedido
+- Automatizar procesos, como puede ser actualizar un stock automáticamnete tras que se realice un pedido
 
--Validar reglas de negocio antes de permir cambios, como por ejemplo no permitir un stock negativo
+- Validar reglas de negocio antes de permir cambios, como por ejemplo no permitir un stock negativo
 
--Realziar acciones invisibles para el usuario, como guardar historiales o calcular el total de cantidades que nos interesen.
+- Realziar acciones invisibles para el usuario, como guardar historiales o calcular el total de cantidades que nos interesen.
 
 Creamos un trigger llamado *“trActualizarStockDespuesDePedido”*, en donde actualizamos automaticamente el stock tras que se realice un pedido,  y otro trigger llamado *“trActualizarStockDespuesDePedido”*, para no permitir un stock negativo.
 
@@ -342,13 +342,13 @@ Creamos un trigger llamado *“trActualizarStockDespuesDePedido”*, en donde ac
 Una *vista* es como una ventana virtual a los datos de una o más tablas. Esta muestra un conjunto de resultados personalizados según una consulta SELECT.
 Sirven para:
 
--Simplificar consultas complejas, como unir varias tablas.
+- Simplificar consultas complejas, como unir varias tablas.
 
--Mostrar información específica sin exponer todas las columnas o tablas.
+- Mostrar información específica sin exponer todas las columnas o tablas.
 
--Restringir el acceso a ciertos datos sensibles (por ejemplo, sin mostrar precios de coste).
+- Restringir el acceso a ciertos datos sensibles (por ejemplo, sin mostrar precios de coste).
 
--Para usarla como base de informes o visualización de interés, como por ejemplo la vista que muestre solo los productos ecológicos con stock bajo, en el apartado 7 de este informe.
+- Para usarla como base de informes o visualización de interés, como por ejemplo la vista que muestre solo los productos ecológicos con stock bajo, en el apartado 7 de este informe.
 
 Otra vista interesante, podría ser la detección de clientes frecuentes por medio de visualziar cuánto ha comprado cada cliente. Eso puede servir oara campañas de fidelización y mostrar estadísticas al respecto, que está en la lista con lo que se venía trabajando en el apartado de “Ampliación” anterior.
 
@@ -363,15 +363,15 @@ Se han realizado una serie de acciones para asegurar que la base de datos de Glo
 
 A modo de resumen, se ha implementado lo siguiente:
 
--*Pruebas de inserción*: Se insertaron registros realistas en diversas tablas (proveedor, producto, pedido, cliente, etc.) para un tipo de comercio ecológico. Esto validó que las claves foráneas, los tipos de datos y las relaciones N:1 y N:N estén correctamente definidas.
+- *Pruebas de inserción*: Se insertaron registros realistas en diversas tablas (proveedor, producto, pedido, cliente, etc.) para un tipo de comercio ecológico. Esto validó que las claves foráneas, los tipos de datos y las relaciones N:1 y N:N estén correctamente definidas.
 
--*Validación de relaciones*: Se actualizaron pedidos para vincularlos con clientes, garantizando la integridad de claves externas. Las relaciones entre productos y pedidos también fueron verificadas.
+- *Validación de relaciones*: Se actualizaron pedidos para vincularlos con clientes, garantizando la integridad de claves externas. Las relaciones entre productos y pedidos también fueron verificadas.
 
--*Mejoras estructurales*: Se añadió la tabla intermedia “productoCertificacion” para productos con múltiples sellos ecológicos, y se incorporó una tabla de impacto ambiental para enriquecer el análisis ecológico de los productos.
+- *Mejoras estructurales*: Se añadió la tabla intermedia “productoCertificacion” para productos con múltiples sellos ecológicos, y se incorporó una tabla de impacto ambiental para enriquecer el análisis ecológico de los productos.
 
--*Normalización, vistas y triggers*: Se normalizó la categoría de productos mediante una nueva tabla “categoria”, eliminando duplicidades y mejorando la clasificación de productos. También se creó una vista llamada “vistaProductosBajoStock”, para identificar productos con bajo stock. Por otro lado, se añadieron triggers para su mejora en cuanto a limitar el stokage negativo y automatización del stockage al hacer compras.
+- *Normalización, vistas y triggers*: Se normalizó la categoría de productos mediante una nueva tabla “categoria”, eliminando duplicidades y mejorando la clasificación de productos. También se creó una vista llamada “vistaProductosBajoStock”, para identificar productos con bajo stock. Por otro lado, se añadieron triggers para su mejora en cuanto a limitar el stokage negativo y automatización del stockage al hacer compras.
 
--*Pruebas de integridad*: Todos los campos se ajustaron a su contexto, evitando ambigüedades. Se realizaron pruebas de inserción (INSERT) y actualización de datos (UPDATE), validando que las relaciones y restricciones funcionaran correctamente.
+- *Pruebas de integridad*: Todos los campos se ajustaron a su contexto, evitando ambigüedades. Se realizaron pruebas de inserción (INSERT) y actualización de datos (UPDATE), validando que las relaciones y restricciones funcionaran correctamente.
 
 
 #10. Conclusiones
@@ -396,23 +396,23 @@ Con el uso de vistas, triggers y la ampliación de la base de datos, el sistema 
 Aunque la base de datos de GlobalMart está optimizada para cumplir con las necesidades actuales, sería conveniente explorar áreas de mejora para asegurar que el sistema continúe siendo robusto, escalable y adecuado a las futuras demandas del negocio. A continuación, se dan algunos detalles de las principales áreas de mejora:
 
 1 - *Tecnologías Emergentes*:
- -Inteligencia Artificial: Usar machine learning para predecir tendencias de ventas y personalizar recomendaciones.
- -Comercio Electrónico y Móviles: Integrar la base de datos con plataformas adecuadas y desarrollar apps móviles para mejorar la experiencia del cliente.
+ - Inteligencia Artificial: Usar machine learning para predecir tendencias de ventas y personalizar recomendaciones.
+ - Comercio Electrónico y Móviles: Integrar la base de datos con plataformas adecuadas y desarrollar apps móviles para mejorar la experiencia del cliente.
  
 2. *Seguridad y Protección de Datos*:
--Implementar encriptación para proteger datos sensibles y cumplir con las normativas de privacidad.
+- Implementar encriptación para proteger datos sensibles y cumplir con las normativas de privacidad.
 
 3. *Automatización de Procesos*:
--Gestión Automática de Inventarios: Ajustar el stock y realizar pedidos de manera automática.
--Generación Automática de Informes: Crear informes sobre ventas, inventarios y sostenibilidad.
+- Gestión Automática de Inventarios: Ajustar el stock y realizar pedidos de manera automática.
+- Generación Automática de Informes: Crear informes sobre ventas, inventarios y sostenibilidad.
 
 5. *Nuevas Funcionalidades*:
- -Análisis Predictivo: Prever ventas y optimizar la distribución de productos.
- -Certificaciones y Personalización: Ampliar las certificaciones y ofrecer una experiencia más personalizada a los clientes, como por ejemplo, descuentos.
+ - Análisis Predictivo: Prever ventas y optimizar la distribución de productos.
+ - Certificaciones y Personalización: Ampliar las certificaciones y ofrecer una experiencia más personalizada a los clientes, como por ejemplo, descuentos.
 
 6. *Escalabilidad y Rendimiento*:
--Optimización para Grandes Volúmenes de Datos: Mejorar la capacidad de la base de datos para manejar grandes cantidades de información.
--Migración a la Nube: Aumentar la escalabilidad y disponibilidad del sistema.
+- Optimización para Grandes Volúmenes de Datos: Mejorar la capacidad de la base de datos para manejar grandes cantidades de información.
+- Migración a la Nube: Aumentar la escalabilidad y disponibilidad del sistema.
 
 
 
