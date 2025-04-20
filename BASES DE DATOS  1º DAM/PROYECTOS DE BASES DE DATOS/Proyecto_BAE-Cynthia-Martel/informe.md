@@ -31,7 +31,7 @@ Como resultado del trabajo realizado, se ejecutará un modelo de datos eficaz y 
 # 2. Análisis
 Según el enunciado inicial presente en el archivo llamado “GlobalMart Ltda.md”, en donde se expone las necesidades y objetivos de la empresa con respecto al manejo de su base de datos, realizamos el siguiente análisis a modo de resumen.
 
-##🛠️ **Contexto y Desafíos**:
+## **Contexto y Desafíos** 🛠️:
  GlobalMart Ltda. enfrenta varios problemas operativos en su gestión de compras:
 Falta de integración eficaz entre proveedores, productos y pedidos.
 Dificultades para rastrear el historial de compras y el estado de los pedidos.
