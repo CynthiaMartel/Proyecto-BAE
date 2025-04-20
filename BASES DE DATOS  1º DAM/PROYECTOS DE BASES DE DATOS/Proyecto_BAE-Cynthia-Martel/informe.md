@@ -1,17 +1,17 @@
 ![Portada del proyecto](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/recursos/Portada_Proyecto.jpg)
 
 ## Índice
-### 1. Introducción
-### 2. Análisis Enunciado
-### 3. Modelo Relacional
-### 4. Modelo Conceptual
-### 5. Implementación MySQL
-### 6. Consultas
-### 7. Ampliación base datos
-### 8. Vistas y Triggers
-### 9. Pruebas y Validación
-### 10. Conclusiones
-### 11. Anexos
+### 1- [Introducción](#1. Introducción)
+### 2- [Análisis Enunciado](#2. Análisis)
+### 3-  [Modelo Conceptual](# 3. Modelo Conceptual)
+### 4- [Modelo Relacional](# 4. Modelo Relacional)
+### 5- [Implementación MySQL](# 5. Implementación en MySQL)
+### 6- [Consultas](# 6. Consultas Propuestas)
+### 7- [Ampliación base de datos](## 7. Consultas con funciones agregadas y GROUP BY)
+### 8- [Vistas y Triggers](#consultas-sql)
+### 9- [Pruebas y Validación](#consultas-sql)
+### 10- [Conclusión](#conclusión)
+### 11- [Anexos](#conclusión)
 
 # 1. Introducción
 En el presente informe abordamos el desarrollo de un sistema de gestión de compras para la empresa **GlobalMart Ltda**., realizado para el módulo de Base de Datos del primer curso del Ciclo Formativo de Desarrollo de Aplicaciones Multiplataformas. 
@@ -229,14 +229,14 @@ Procedimos a la inserción de datos en la base de datos gestionCompraGlobalMart 
 
 A continuación se propone una lista de consultas realizadas, y se adjunta capturas de pantalla con algunos de los ejemplos de estas. Hay más ejemplos en la carpeta de scripts de este proyecto, además de las que aquí se muestra.
 
-## 1. Consultas básicas con SELECT
+## 6.1. Consultas básicas con SELECT
 Las consultas básicas permiten visualizar información específica de una o varias tablas. Son esenciales para la verificación de datos y la toma de decisiones.
 
 Ejemplo de utilidad: En este caso, hicimos una verificación del listado de productos disponibles junto con su precio y stock para evaluar disponibilidad. 
 
 ![Consulta SELECT](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20b%C3%A1sicas%20con%20select.png)
 
-## 2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
+## 6.2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
 Este tipo de consultas nos ayuda a mantener una integridad y actualización de la base de datos. 
 
 Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) el número de unidades disponibles de un producto tras su venta. Eliminar (DELETE) un proveedor que ya no colabora con la empresa.
@@ -247,28 +247,28 @@ Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) e
 
 ![Consulta DELETE](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consulta%20DELETE.png)
 
-## 3. Consultas con JOIN
+## 6.3. Consultas con JOIN
 El uso de JOIN es clave para relacionar datos entre diferentes tablas. Permiten cruzar información de productos, proveedores y pedidos para obtener una visión más completa del sistema.
 
 Ejemplo de utilidad: Saber qué proveedor suministró un producto vendido en un pedido específico.
 
 ![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
-## 4. Consultas con WHERE
+## 6.4. Consultas con WHERE
 Aunque ya se ha visto su uso en las consultas de los anteriores apartados, merecen una mención especial, ya que, precisamente, permiten filtrar los datos según condiciones determinadas. Son fundamentales para localizar registros específicos.
 
 Ejemplo de utilidad: Obtener los productos cuyo stock está por debajo de un cierto umbral para planificar reabastecimiento.
 
 ![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
-## 5. Consultas con ORDER BY
+## 6.5. Consultas con ORDER BY
 Ordenan los resultados según un criterio, como precio, nombre o fecha. Esto facilita la visualización y el análisis.
 
 Ejemplo de utilidad: Listar productos del más barato al más caro.
 
 ![Consulta ORDER BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20ORDER%20BY.png)
 
-## 6. Consultas con fechas
+## 6.6 Consultas con fechas
 El manejo de fechas es esencial para realizar seguimientos temporales, como analizar entregas o pedidos en un rango determinado.
 
 ![Consulta con fecha](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20fecha.png)
@@ -276,14 +276,14 @@ El manejo de fechas es esencial para realizar seguimientos temporales, como anal
 
 Ejemplo de utilidad: Ver todos los pedidos realizados durante el mes de marzo de 2025, o alguna fecha específica.
 
-## 7. Consultas con funciones agregadas y GROUP BY
+## 6.7. Consultas con funciones agregadas y GROUP BY
 Permiten agrupar datos y realizar cálculos como sumas, promedios o conteos.
 
 Ejemplo de utilidad: Calcular el importe total generado por cada pedido.
 
 ![Consulta GROUP BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Consulta_Consultas%20GROUP%20BY.png)
 
-## 8. Consultas con RANK y uso analítico
+## 6.8. Consultas con RANK y uso analítico
 Las funciones analíticas como RANK() permiten clasificar los datos según criterios definidos, muy útiles en análisis comparativos.
 
 Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
