@@ -60,6 +60,8 @@ El sistema se desarrolla siguiendo una estructura clara y organizada, que preten
 Se presenta aquí, la estructura propuesta que se ha seguido:
 
 - 📄 Archivo informe.md: contiene toda la documentación técnica y funcional del sistema, desde el análisis hasta el modelo físico y conclusiones.
+  
+- 📄 Archivo informe.pdf: mismo contenido que el archivo informe.md, pero en formato pdf con un diseño más complejo en cuanto a detalles gráficos añadidos.
 
 - 📁 Carpeta Scripts/: incluye los archivos .sql con las sentencias para la creación de tablas, inserción de datos y consultas informativas.
 
@@ -80,10 +82,10 @@ Se presenta a continuación, un análisis de las entidades clave que compondrá 
 Información sobre las empresas o personas que suministran productos.
 
 - 🆔idProveedor (PK): Identificador único del proveedor.
--nombre: Nombre del proveedor o empresa.
--numeroTelefono: Teléfono de contacto del proveedor.
--direccion: Dirección postal del proveedor.
--email: Correo electrónico del proveedor.
+- 🏷️ nombre: Nombre del proveedor o empresa.
+- 🏷️ numeroTelefono: Teléfono de contacto del proveedor.
+- 🏷️ direccion: Dirección postal del proveedor.
+- 🏷️ email: Correo electrónico del proveedor.
 
 2. *Producto*
 Datos sobre los productos gestionados por la empresa.
@@ -126,7 +128,8 @@ Para el funcionamiento de las tablas, estas necesitan de relaciones entre ellas.
 ## *Modelo Conceptual gráfico con draw io* 🔍
 A continuación, se representa el corrrespondiente modelo conceptual desarrollado en Draw.io. De esta manera, se puede visualizar de manera gráfica, las entidades clave del sistema de gestión de compra de la empresa GlobalMart Ldt., donde se dibujan las entidades principales, sus atributos y las relaciones entre ellas.
 
-![Modelo Conceptual](2.jpg)
+![Modelo Conceptual](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Conceptual_Gesti%C3%B3nCompra_GlobalMart.png)
+
 
 # 4. Modelo Relacional
 Gracias al modelo conceptual, que fue diseñado, explicado y representado gráficamente con la ayuda de herramientas como Draw.io en el apartado anterior, podemos entender las entidades del sistema y sus relaciones a un nivel básico. 
