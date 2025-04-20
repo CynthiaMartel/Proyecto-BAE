@@ -203,11 +203,11 @@ Esta herramienta, además de permitir la creación visual mediante el diagrama E
 
 Para ello, se hizo uso de la funcionalidad *Forward Engineer to Database*, que permitió transformar el modelo gráfico en un conjunto de ejecutables en MySQL. 
 
-![Forward Engineer to Database](3.jpg)
+![Forward Engineer](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Forward%20Engineer%20to%20Database.png)
 
 El resultado fue la creación estructurada de todas las tablas necesarias, incluyendo sus campos, relaciones y restricciones de integridad.
 
-![Tablas creadas en MySQL Workbrench](4.jpg)
+![Tablas MySQL](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Tablas%20creadas%20en%20MySQL%20Workbrench.png)
 
 Con estas decisiones, la base de datos queda optimizada para las necesidades actuales de gestión de compras de GlobalMart Ltd., y preparada para una futura posible escalabilidad.
 
@@ -217,9 +217,11 @@ Con estas decisiones, la base de datos queda optimizada para las necesidades act
 Procedimos a la inserción de datos en la base de datos gestionCompraGlobalMart con el objetivo de poner en práctica su funcionamiento y comprobar que los procesos de carga y gestión se realizan correctamente. Así mismo, esta carga de datos resulta imprescindible para el desarrollo de los siguientes apartados de este informe.
 
 
-![Insertando datos de prueba en base de datos](5.jpg)
-![Insertando datos de prueba en base de datos](6.jpg)
-![Insertando datos de prueba en base de datos](7.jpg)
+![Insertando datos 1](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Insertando%20datos%20de%20prueba%20en%20base%20de%20datos_1.png)
+
+![Insertando datos 2](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Insertando%20datos%20de%20prueba%20en%20base%20de%20datos_2.png)
+
+![Insertando datos 3](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Insertando%20datos%20de%20prueba%20en%20base%20de%20datos_3.png)
 
 # 6. Consultas Propuestas
 
@@ -232,42 +234,45 @@ Las consultas básicas permiten visualizar información específica de una o var
 
 Ejemplo de utilidad: En este caso, hicimos una verificación del listado de productos disponibles junto con su precio y stock para evaluar disponibilidad. 
 
-![Consultas básicas con select](8.jpg)
+![Consulta SELECT](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20b%C3%A1sicas%20con%20select.png)
 
 ## 2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
 Este tipo de consultas nos ayuda a mantener una integridad y actualización de la base de datos. 
 
 Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) el número de unidades disponibles de un producto tras su venta. Eliminar (DELETE) un proveedor que ya no colabora con la empresa.
 
-![Consultas INSERT](9.jpg)
-![Consultas UPDATE](10.jpg)
-![Consultas DELATE](11.jpg)
+![Consulta INSERT](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20INSERT.png)
+
+![Consulta UPDATE](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20UPDATE.png)
+
+![Consulta DELETE](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consulta%20DELETE.png)
 
 ## 3. Consultas con JOIN
 El uso de JOIN es clave para relacionar datos entre diferentes tablas. Permiten cruzar información de productos, proveedores y pedidos para obtener una visión más completa del sistema.
 
 Ejemplo de utilidad: Saber qué proveedor suministró un producto vendido en un pedido específico.
 
-![Consultas JOIN](11.jpg)
+![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
 ## 4. Consultas con WHERE
 Aunque ya se ha visto su uso en las consultas de los anteriores apartados, merecen una mención especial, ya que, precisamente, permiten filtrar los datos según condiciones determinadas. Son fundamentales para localizar registros específicos.
 
 Ejemplo de utilidad: Obtener los productos cuyo stock está por debajo de un cierto umbral para planificar reabastecimiento.
 
-![Consultas WHERE](11.jpg)
+![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
 ## 5. Consultas con ORDER BY
 Ordenan los resultados según un criterio, como precio, nombre o fecha. Esto facilita la visualización y el análisis.
 
 Ejemplo de utilidad: Listar productos del más barato al más caro.
 
-![Consultas ORDER BY](12.jpg)
+![Consulta ORDER BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20ORDER%20BY.png)
 
 ## 6. Consultas con fechas
 El manejo de fechas es esencial para realizar seguimientos temporales, como analizar entregas o pedidos en un rango determinado.
 
-![Consultas DATE](13.jpg)
+![Consulta con fecha](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20fecha.png)
+
 
 Ejemplo de utilidad: Ver todos los pedidos realizados durante el mes de marzo de 2025, o alguna fecha específica.
 
@@ -276,14 +281,14 @@ Permiten agrupar datos y realizar cálculos como sumas, promedios o conteos.
 
 Ejemplo de utilidad: Calcular el importe total generado por cada pedido.
 
-![Consultas GROUP BY](14.jpg)
+![Consulta GROUP BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Consulta_Consultas%20GROUP%20BY.png)
 
 ## 8. Consultas con RANK y uso analítico
 Las funciones analíticas como RANK() permiten clasificar los datos según criterios definidos, muy útiles en análisis comparativos.
 
 Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
 
-![Consultas RANK](15.jpg)
+![Consulta RANK](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20RANK.png)
 
 # 7.Ampliación de la base de datos 
 
