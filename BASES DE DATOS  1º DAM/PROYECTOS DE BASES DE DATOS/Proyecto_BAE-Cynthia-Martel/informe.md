@@ -45,29 +45,29 @@ Análisis de datos: Proporcionar información organizada y actualizada, sobre re
 
 📄 Se espera construir un sistema de gestión de compra que permita superar los desafíos actuales, mejorar la eficacia en la operativa de la empresa y la buena trazabilidad de los datos para el crecimiento futuro de la empresa .
 
-### **Presentación de GlobalMart** 🌱♻️ (Presentación ficticia)
+## **Presentación de GlobalMart** 🌱♻️ (Presentación ficticia)
 
 GlobalMart Ltd. es una empresa comprometida con el comercio sostenible y en disminuir el impacto ambiental. Nos dedicamos a la distribución de productos de papelería, electrónica, textiles y accesorios con un enfoque en el respeto ecológico y el apoyo a proveedores locales que comparten nuestros valores éticos.
 
 En GlobalMart Ltd., tenemos la misión de impulsar un cambio en el paradigma de la cotidianidad: un compromiso ecológico real y el desarrollo de la economía local. Esto se refleja en:
 
-🌱 Catálogo 100% ecológico, con productos reciclados y reutilizables.
-💡 Red de proveedores locales canarios para minimizar la huella de carbono y promover la economía circular.
-👕 Políticas de stock responsable, priorizando la calidad y la durabilidad.
-♻️ Gestión eficiente de residuos y embalaje ecológico.
+- Catálogo 100% ecológico, con productos reciclados y reutilizables. 🌱
+- Red de proveedores locales canarios para minimizar la huella de carbono y promover la economía circular. 💡
+- Políticas de stock responsable, priorizando la calidad y la durabilidad. 💡
+- Gestión eficiente de residuos y embalaje ecológico. ♻️
 
 
-### Estructura del desarrollo 📝
+## Estructura del desarrollo 📝
 El sistema se desarrolla siguiendo una estructura clara y organizada, que pretende facilitar la documentación del proyecto, así como su implementación. 
 Se presenta aquí, la estructura propuesta que se ha seguido:
 
-📄 Archivo informe.md: contiene toda la documentación técnica y funcional del sistema, desde el análisis hasta el modelo físico y conclusiones.
+- 📄 Archivo informe.md: contiene toda la documentación técnica y funcional del sistema, desde el análisis hasta el modelo físico y conclusiones.
 
-📁 Carpeta Scripts/: incluye los archivos .sql con las sentencias para la creación de tablas, inserción de datos y consultas informativas.
+- 📁 Carpeta Scripts/: incluye los archivos .sql con las sentencias para la creación de tablas, inserción de datos y consultas informativas.
 
-📁 Carpeta Recursos/: almacena información complementaria, referencias o ejemplos adicionales.
+- 📁 Carpeta Recursos/: almacena información complementaria, referencias o ejemplos adicionales.
 
-📁 Carpeta Capturas/: contiene imágenes del modelo entidad-relación y otras representaciones visuales que acompañan el análisis y diseño del sistema.
+- 📁 Carpeta Capturas/: contiene imágenes del modelo entidad-relación y otras representaciones visuales que acompañan el análisis y diseño del sistema.
 
 # 3. Modelo Conceptual
 
@@ -78,7 +78,7 @@ Como buena práctica, el modelo conceptual es asienta las bases para la creació
 ## *Entidades princpales del modelo conceptual* 📊
 Se presenta a continuación, un análisis de las entidades clave que compondrá dicho modelo conceptual, cada una con sus respectivos atributos. La clave primaria se representa con “PK” (siglas que provienen de “Princpal Key”, en inglés), y la clave foránea con “FK” (siglas que provienen de “Foreing Key”, también en inglés). Se explicarán estos dos coceptos con más detenimiento en el apartado 3 de este informe.
 
-###1. Proveedor
+1. *Proveedor*
 Información sobre las empresas o personas que suministran productos.
 
 -idProveedor (PK): Identificador único del proveedor.
@@ -87,7 +87,7 @@ Información sobre las empresas o personas que suministran productos.
 -direccion: Dirección postal del proveedor.
 -email: Correo electrónico del proveedor.
 
-###2. Producto
+2. *Producto*
 Datos sobre los productos gestionados por la empresa.
 
 -idProducto (PK): Identificador único del producto.
@@ -98,7 +98,7 @@ Datos sobre los productos gestionados por la empresa.
 -categoria: Clasificación del producto (ej. electrónica, hogar, etc.).
 -id_Proveedor (FK): Clave foránea que relaciona el producto con su proveedor.
 
-###3. Pedido
+3. *Pedido*
 Registro de cada compra realizada a un proveedor.
 
 -idPedido (PK): Identificador único del pedido.
@@ -107,7 +107,7 @@ Registro de cada compra realizada a un proveedor.
 -estadoPedido: Estado actual del pedido (pendiente, enviado, entregado, etc.).
 -importeTotal: Monto total del pedido (calculado sumando los subtotales de los productos).
 
-###4. DetallePedido
+4. *DetallePedido*
 Entidad intermedia para representar los productos incluidos en un pedido (relación muchos a muchos).
 
 -idDetallePedido (PK): Identificador único del detalle del pedido.
