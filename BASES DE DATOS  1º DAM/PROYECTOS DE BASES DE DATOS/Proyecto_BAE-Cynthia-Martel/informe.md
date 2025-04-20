@@ -1,17 +1,19 @@
 ![Portada del proyecto](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/recursos/Portada_Proyecto.jpg)
 
 ## Índice
-### 1- [Introducción](#1. Introducción)
-### 2- [Análisis Enunciado](#2. Análisis)
-### 3-  [Modelo Conceptual](# 3. Modelo Conceptual)
-### 4- [Modelo Relacional](# 4. Modelo Relacional)
-### 5- [Implementación MySQL](# 5. Implementación en MySQL)
-### 6- [Consultas](# 6. Consultas Propuestas)
-### 7- [Ampliación base de datos](## 7. Consultas con funciones agregadas y GROUP BY)
-### 8- [Vistas y Triggers](#consultas-sql)
-### 9- [Pruebas y Validación](#consultas-sql)
-### 10- [Conclusión](#conclusión)
-### 11- [Anexos](#conclusión)
+
+- **1.** [Introducción](#1-introducción)
+- **2.** [Análisis Enunciado](#2-análisis-enunciado)
+- **3.** [Modelo Conceptual](#3-modelo-conceptual)
+- **4.** [Modelo Relacional](#4-modelo-relacional)
+- **5.** [Implementación MySQL](#5-implementación-mysql)
+- **6.** [Consultas](#6-consultas)
+- **7.** [Ampliación base de datos](#7-ampliación-base-de-datos)
+- **8.** [Vistas y Triggers](#8-vistas-y-triggers)
+- **9.** [Pruebas y Validación](#9-pruebas-y-validación)
+- **10.** [Conclusiones](#10-conclusiones)
+- **11.** [Anexos](#11-anexos)
+
 
 # 1. Introducción
 En el presente informe abordamos el desarrollo de un sistema de gestión de compras para la empresa **GlobalMart Ltda**., realizado para el módulo de Base de Datos del primer curso del Ciclo Formativo de Desarrollo de Aplicaciones Multiplataformas. 
@@ -26,7 +28,7 @@ Por otra parte, se adjuntará una serie de scripts y otros recursos complementar
 
 Como resultado del trabajo realizado, se ejecutará un modelo de datos eficaz y bien estructurado que permita gestionar la información relacionada con proveedores, productos y pedidos, optimizando así los procesos internos de la empresa GlobalMart Ldta.
 
-# 2. Análisis
+# 2. Análisis Enunciado
 Según el enunciado inicial presente en el archivo llamado “GlobalMart Ltda.md”, en donde se expone las necesidades y objetivos de la empresa con respecto al manejo de su base de datos, realizamos el siguiente análisis a modo de resumen.
 
 ## **Contexto y Desafíos** 🛠️:
@@ -165,7 +167,7 @@ Este diagrama es una representación gráfica avanzada de la base de datos que n
 ![Modelo Relacional](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_Gesti%C3%B3nCompra_GlobalMart.png)
 
 
-# 5. Implementación en MySQL
+# 5. Implementación MySQL
 🧰 Una vez definido el modelo conceptual y transformado a su correspondiente modelo relacional, se procede a su implementación en MySQL. Para ello, se emplea el software MySQL Workbench, como pilar fundamental en la optimización del sistema de gestión de compras de la empresa GlobalMart Ltd. 
 
 En esta línea, se expone a continuación el análisis del proceso de creación de la base de datos denominada gestionCompraGlobalmart, así como su implementación dentro del entorno gráfico proporcionado por MySQL Workbench. 
@@ -223,7 +225,7 @@ Procedimos a la inserción de datos en la base de datos gestionCompraGlobalMart 
 
 ![Insertando datos 3](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Insertando%20datos%20de%20prueba%20en%20base%20de%20datos_3.png)
 
-# 6. Consultas Propuestas
+# 6. Consultas
 
 📌 Una vez realizada la inserción de datos en las diferentes tablas de la base de datos gestionCompraGlobalMart, procedimos a la ejecución de diferentes consultas SQL con el objetivo de manipular, a forma de prueba, la información disponible, así como su analisis correspondiente.
 
@@ -290,32 +292,32 @@ Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
 
 ![Consulta RANK](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20RANK.png)
 
-# 7.Ampliación de la base de datos 
+#  7. Ampliación base de datos
 
 A continuación se exponen algunas mejoras y ampliaciones, implementadas en el contexto de la empresa de la empresa de GlobalMart Ldt.
 
-## 1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
+## 7.1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
 Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
 ![tabla cerificacionEcologica](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
 
-## 2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
+## 7.2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
 
 Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
 
 ![Tabla Impacto Ambiental](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20impactoambiental.png)
 
-## 3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
+## 7.3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
 
 ![tabla cliente](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cliente.png)
 
 
-## 4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
+## 7.4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
 Esto supone una relación entre categoria y producto de uno a muchos (N:N).
 
 ![tabla categoria](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20categoria.png)
 
-## 5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
+## 7.5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
 
 Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
 En este caso, hemos determinado que un stockage bajo significarán aquellos que tienen menos de 100 unidades disponibles en inventario.
@@ -329,9 +331,9 @@ Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo 
 ![Modelo Relacional ampliado](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_GlobaMart%20_AMPLIADO.png)
 
 
-# 8. Vistas y Triggers 
+# 8. Vistas y Triggers
 
-## Triggers 🔧
+## 8.1 Triggers 🔧
 
 Un *Trigger*, en resuemen, es un bloque de código automático que se ejecuta cuando ocurre un evento en una tabla. Esto es, por ejemplo INSERT, UPDATE o DELETE. Los Triggers se utilizan para:
 
@@ -345,7 +347,7 @@ Creamos un trigger llamado *“trActualizarStockDespuesDePedido”*, en donde ac
 
 ![Triggers](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/tiggers.png)
 
-## 👁️Vistas
+## 8.2 👁️Vistas
 Una *vista* es como una ventana virtual a los datos de una o más tablas. Esta muestra un conjunto de resultados personalizados según una consulta SELECT.
 Sirven para:
 
@@ -364,7 +366,7 @@ Para ello creamos la vista *“vistaResumenComprasClientes”*.
 ![Vistas](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/vistas.png)
 
 
-# 9. Pruebas y validaciones
+# 9. Pruebas y Validación
 
 Se han realizado una serie de acciones para asegurar que la base de datos de GlobalMart sea coherente y consistente, esté integrada, y cumpla con la integridad, tanto de referencia, escalabilidad y optimización, para que pueda ejecutarse de manera eficaz. 
 
@@ -398,7 +400,7 @@ Triggers: Se implementaron triggers para actualizar el stock automáticamente y 
 ## Mejoras y Futuro  💾
 Con el uso de vistas, triggers y la ampliación de la base de datos, el sistema de gestión de compras ha sido fortalecido, y ahora es más robusto para adaptarse a futuras ampliaciones y necesidades. Se espera que este sistema sea una herramienta eficaz para la gestión del inventario, la automatización de procesos y la toma de decisiones estratégicas para el crecimiento de GlobalMart.
 
-# 10. Anexos
+# 11. Anexos
 ## 1- Análisis de posibles mejoras futuras 📝
 Aunque la base de datos de GlobalMart está optimizada para cumplir con las necesidades actuales, sería conveniente explorar áreas de mejora para asegurar que el sistema continúe siendo robusto, escalable y adecuado a las futuras demandas del negocio. A continuación, se dan algunos detalles de las principales áreas de mejora:
 
