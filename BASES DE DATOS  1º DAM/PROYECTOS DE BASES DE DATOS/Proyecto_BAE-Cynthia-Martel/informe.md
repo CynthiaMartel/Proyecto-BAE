@@ -1,5 +1,4 @@
-![Portada del proyecto](https://raw.githubusercontent.com/cynthia-martel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/recursos/Portada_Proyecto.jpg)
-
+![Portada del proyecto](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/recursos/Portada_Proyecto.jpg)
 
 ## Índice
 ### 1. Introducción
