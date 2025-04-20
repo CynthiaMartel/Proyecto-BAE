@@ -378,13 +378,13 @@ A modo de resumen, se ha implementado lo siguiente:
 
 El proceso de desarrollo de la base de datos de GlobalMart ha sido un proyecto integral que abarca desde la planificación inicial hasta la implementación avanzada, mejorando tanto la estructura de datos como la eficiencia operativa de la gestión comercial. El proceso se puede dividir en varias fases clave, que incluyeron:
 
-## 1- Creación del Modelo Conceptual y Modelo Relacional: Se identificaron las entidades clave (proveedores, productos, pedidos, clientes) y sus relaciones, transformándolas en un modelo relacional con tablas como proveedor, producto, y cliente, utilizando claves foráneas para mantener la integridad referencial.
+1- Creación del Modelo Conceptual y Modelo Relacional: Se identificaron las entidades clave (proveedores, productos, pedidos, clientes) y sus relaciones, transformándolas en un modelo relacional con tablas como proveedor, producto, y cliente, utilizando claves foráneas para mantener la integridad referencial.
 
-## 2-La implementación en MySQL trabajando con el software MySQL Workbrench: Se creó la base de datos en MySQL, insertando datos iniciales para visualizar y comprobar el buen funcionamiento de la tienda y validar las relaciones creadas.
+2- La implementación en MySQL trabajando con el software MySQL Workbrench: Se creó la base de datos en MySQL, insertando datos iniciales para visualizar y comprobar el buen funcionamiento de la tienda y validar las relaciones creadas.
 
-## 3-La implementación de ampliación de la base de datos inicial y mejora de esta: Se añadieron funcionalidades para mejorar la trazabilidad y análisis, como tablas para certificaciones ecológicas, impacto ambiental, clientes y categorías de productos.
+3- La implementación de ampliación de la base de datos inicial y mejora de esta: Se añadieron funcionalidades para mejorar la trazabilidad y análisis, como tablas para certificaciones ecológicas, impacto ambiental, clientes y categorías de productos.
 
-## 4-Implementación de triggers y vistas, como características avanzadas para una mejora eficaz en el manejo de los datos: 
+4- Implementación de triggers y vistas, como características avanzadas para una mejora eficaz en el manejo de los datos: 
 Vistas: Se crearon vistas para identificar productos con bajo stock y proporcionar resúmenes de compras por cliente, facilitando la gestión de inventarios y marketing.
 Triggers: Se implementaron triggers para actualizar el stock automáticamente y evitar ventas con stock negativo, mejorando la automatización y evitando errores.
 
