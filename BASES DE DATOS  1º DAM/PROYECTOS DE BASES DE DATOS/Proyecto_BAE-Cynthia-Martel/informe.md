@@ -1,5 +1,6 @@
 # Portada
-![Portada del proyecto](https://github.com/CynthiaMartel/Proyecto-BAE/recursos/Portada_Proyecto.jpg)
+![Portada del proyecto](![Portada](https://raw.githubusercontent.com/cynthia-martel/Proyecto-BAE/main/BASES%20DE%20DATOS%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/recursos/Portada_Proyecto.jpg)
+
 
 
 ## Índice
