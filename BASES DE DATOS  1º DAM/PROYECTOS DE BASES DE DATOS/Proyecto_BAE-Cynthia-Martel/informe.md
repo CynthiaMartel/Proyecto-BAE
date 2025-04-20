@@ -1,5 +1,5 @@
 # Portada
-![Portada del proyecto](../recursos/Portada_Proyecto.jpg)
+![Portada del proyecto](https://github.com/CynthiaMartel/Proyecto-BAE/recursos/Portada_Proyecto.jpg)
 
 
 ## Índice
