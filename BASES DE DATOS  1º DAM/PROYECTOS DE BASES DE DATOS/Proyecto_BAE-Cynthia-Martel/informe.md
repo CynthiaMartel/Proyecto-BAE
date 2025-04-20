@@ -297,35 +297,36 @@ A continuación se exponen algunas mejoras y ampliaciones, implementadas en el c
 ## 1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
 Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
-![tabla cerificacionEcologica](16.jpg)
+![tabla cerificacionEcologica][(https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
 
 ## 2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
 
 Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
 
-![tabla impactoambiental](17.jpg)
+![Tabla Impacto Ambiental](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20impactoambiental.png)
 
 ## 3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
 
-![tabla cliente](18.jpg)
+![tabla cliente](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cliente.png)
+
 
 ## 4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
 Esto supone una relación entre categoria y producto de uno a muchos (N:N).
 
-![tabla categoria](19.jpg)
+![tabla categoria](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20categoria.png)
 
 ## 5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
 
 Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
 En este caso, hemos determinado que un stockage bajo significarán aquellos que tienen menos de 100 unidades disponibles en inventario.
 
-![vistaProductoBajoStock](20.jpg)
+![vistaProductoBajoStock](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_vistaProductoBajoStock.png)
 
  ##Modelo Relacional EER en MySQL Workbrench por ampliación
 
 Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo relacional con las correspondientes modificaciones y añadidos, que podemos apreciar de manera gráfica en el EER de MySQL Workbrench:
 
-![Modelo Relacional ampliado](21.jpg)
+![Modelo Relacional ampliado](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_GlobaMart%20_AMPLIADO.png)
 
 
 # 8. Vistas y Triggers 
@@ -342,8 +343,7 @@ Un *Trigger*, en resuemen, es un bloque de código automático que se ejecuta cu
 
 Creamos un trigger llamado *“trActualizarStockDespuesDePedido”*, en donde actualizamos automaticamente el stock tras que se realice un pedido,  y otro trigger llamado *“trActualizarStockDespuesDePedido”*, para no permitir un stock negativo.
 
-![Triggers](22.jpg)
-
+![Triggers](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/tiggers.png)
 
 ## 👁️Vistas
 Una *vista* es como una ventana virtual a los datos de una o más tablas. Esta muestra un conjunto de resultados personalizados según una consulta SELECT.
@@ -361,7 +361,7 @@ Otra vista interesante, podría ser la detección de clientes frecuentes por med
 
 Para ello creamos la vista *“vistaResumenComprasClientes”*.
 
-![Vistas](22.jpg)
+![Vistas](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/vistas.png)
 
 
 # 9. Pruebas y validaciones
