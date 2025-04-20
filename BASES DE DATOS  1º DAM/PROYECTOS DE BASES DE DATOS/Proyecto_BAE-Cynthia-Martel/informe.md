@@ -297,7 +297,7 @@ A continuación se exponen algunas mejoras y ampliaciones, implementadas en el c
 ## 1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
 Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
-![tabla cerificacionEcologica][(https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
+![tabla cerificacionEcologica](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
 
 ## 2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
 
