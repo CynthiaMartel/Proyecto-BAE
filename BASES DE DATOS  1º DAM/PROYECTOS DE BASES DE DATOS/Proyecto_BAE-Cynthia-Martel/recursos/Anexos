@@ -1,4 +1,4 @@
-# 1- Análisis de posibles mejoras futuras 📝
+# Análisis de posibles mejoras futuras 📝
 Aunque la base de datos de GlobalMart está optimizada para cumplir con las necesidades actuales, sería conveniente explorar áreas de mejora para asegurar que el sistema continúe siendo robusto, escalable y adecuado a las futuras demandas del negocio. A continuación, se dan algunos detalles de las principales áreas de mejora:
 
 Tecnologías Emergentes:
@@ -17,10 +17,10 @@ Optimización para Grandes Volúmenes de Datos: Mejorar la capacidad de la base 
 Migración a la Nube: Aumentar la escalabilidad y disponibilidad del sistema.
 
 
-# 2- Recursos 📝
+# Recursos 📝
 
-https://dev.mysql.com/doc/
-Scripts expuestos en la carpeta del repositorio de Github
+- https://dev.mysql.com/doc/
+- Scripts expuestos en la carpeta del repositorio de Github
 
 
 
