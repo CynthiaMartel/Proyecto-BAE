@@ -197,7 +197,7 @@ Es importante, por otro lado, tener en cuenta los tipos de datos seleccionados. 
 
 ⚙️ Además, se optó por el motor de almacenamiento *InnoDB*, y por la codificación *utf8mb4*, adecuada para representar correctamente cualquier carácter, incluyendo símbolos especiales y emojis.
 
-##Después de definir la consistencia de los datos 💻
+## Después de definir la consistencia de los datos 💻
 
 A partir de esta base sólida en la definición de tipos de datos y su diseño relacional, se procedió a la implementación práctica de la base de datos dentro del entorno MySQL Workbenc, como se menciona anteriormente.
 
