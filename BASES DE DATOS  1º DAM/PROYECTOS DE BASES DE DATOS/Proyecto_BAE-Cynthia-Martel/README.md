@@ -1,3 +1,4 @@
+# GlobalMart Ltd. 🌿
 Este proyecto consiste en el diseño e implementación de un sistema de gestión de compra para la empresa GlobalMart Ltd.
 
 Se ha querido pensar en la utilización de un contexto que le de consistencia al trabajo que podríamos encontrar en una empresa distribuidora de productos.
