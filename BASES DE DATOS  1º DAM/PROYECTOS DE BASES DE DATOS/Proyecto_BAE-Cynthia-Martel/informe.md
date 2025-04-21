@@ -295,14 +295,11 @@ Las funciones analíticas como RANK() permiten clasificar los datos según crite
 
 A continuación se exponen algunas mejoras y ampliaciones, implementadas en el contexto de la empresa de la empresa de GlobalMart Ldt.
 
-- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
-Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
+- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada. Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
 ![tabla cerificacionEcologica](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
 
-- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
-
-Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
+- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
 
 ![Tabla Impacto Ambiental](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20impactoambiental.png)
 
@@ -316,9 +313,7 @@ Esto supone una relación entre categoria y producto de uno a muchos (N:N).
 
 ![tabla categoria](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20categoria.png)
 
-- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
-
-Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
+- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes. Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
 En este caso, hemos determinado que un stockage bajo significarán aquellos que tienen menos de 100 unidades disponibles en inventario.
 
 ![vistaProductoBajoStock](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_vistaProductoBajoStock.png)
@@ -327,8 +322,7 @@ En este caso, hemos determinado que un stockage bajo significarán aquellos que 
 
 Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo relacional con las correspondientes modificaciones y añadidos, que podemos apreciar de manera gráfica en el EER de MySQL Workbrench:
 
-![Modelo Relacional ampliado]([https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_GlobaMart%20_AMPLIADO.png](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_Ampliado.png)
-
+![Modelo Relacional ampliado](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Modelo_Relacional_Ampliado.png)
 
 # 8. Vistas y Triggers
 
