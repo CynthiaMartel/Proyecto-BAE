@@ -231,14 +231,14 @@ Procedimos a la inserción de datos en la base de datos gestionCompraGlobalMart 
 
 A continuación se propone una lista de consultas realizadas, y se adjunta capturas de pantalla con algunos de los ejemplos de estas. Hay más ejemplos en la carpeta de scripts de este proyecto, además de las que aquí se muestra.
 
-## 6.1. Consultas básicas con SELECT
+- 6.1. Consultas básicas con *SELECT*
 Las consultas básicas permiten visualizar información específica de una o varias tablas. Son esenciales para la verificación de datos y la toma de decisiones.
 
 Ejemplo de utilidad: En este caso, hicimos una verificación del listado de productos disponibles junto con su precio y stock para evaluar disponibilidad. 
 
 ![Consulta SELECT](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20b%C3%A1sicas%20con%20select.png)
 
-## 6.2. Consultas de mantenimiento con INSERT, UPDATE, DELATE
+- 6.2. Consultas de mantenimiento con *INSERT, UPDATE, DELATE*
 Este tipo de consultas nos ayuda a mantener una integridad y actualización de la base de datos. 
 
 Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) el número de unidades disponibles de un producto tras su venta. Eliminar (DELETE) un proveedor que ya no colabora con la empresa.
@@ -249,28 +249,28 @@ Ejemplo de utilidad: Insertar un nuevo proveedor (INSERT). Actualizar (UPDATE) e
 
 ![Consulta DELETE](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consulta%20DELETE.png)
 
-## 6.3. Consultas con JOIN
+- 6.3. Consultas con *JOIN*
 El uso de JOIN es clave para relacionar datos entre diferentes tablas. Permiten cruzar información de productos, proveedores y pedidos para obtener una visión más completa del sistema.
 
 Ejemplo de utilidad: Saber qué proveedor suministró un producto vendido en un pedido específico.
 
 ![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
-## 6.4. Consultas con WHERE
+- 6.4. Consultas con *WHERE*
 Aunque ya se ha visto su uso en las consultas de los anteriores apartados, merecen una mención especial, ya que, precisamente, permiten filtrar los datos según condiciones determinadas. Son fundamentales para localizar registros específicos.
 
 Ejemplo de utilidad: Obtener los productos cuyo stock está por debajo de un cierto umbral para planificar reabastecimiento.
 
 ![Consulta JOIN](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20JOIN.png)
 
-## 6.5. Consultas con ORDER BY
+- 6.5. Consultas con *ORDER BY*
 Ordenan los resultados según un criterio, como precio, nombre o fecha. Esto facilita la visualización y el análisis.
 
 Ejemplo de utilidad: Listar productos del más barato al más caro.
 
 ![Consulta ORDER BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20ORDER%20BY.png)
 
-## 6.6 Consultas con fechas
+- 6.6 Consultas con *fechas*
 El manejo de fechas es esencial para realizar seguimientos temporales, como analizar entregas o pedidos en un rango determinado.
 
 ![Consulta con fecha](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_Consultas%20fecha.png)
@@ -278,14 +278,14 @@ El manejo de fechas es esencial para realizar seguimientos temporales, como anal
 
 Ejemplo de utilidad: Ver todos los pedidos realizados durante el mes de marzo de 2025, o alguna fecha específica.
 
-## 6.7. Consultas con funciones agregadas y GROUP BY
+- 6.7. Consultas con funciones agregadas y *GROUP BY*
 Permiten agrupar datos y realizar cálculos como sumas, promedios o conteos.
 
 Ejemplo de utilidad: Calcular el importe total generado por cada pedido.
 
 ![Consulta GROUP BY](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Consulta_Consultas%20GROUP%20BY.png)
 
-## 6.8. Consultas con RANK y uso analítico
+- 6.8. Consultas con *RANK* y uso analítico
 Las funciones analíticas como RANK() permiten clasificar los datos según criterios definidos, muy útiles en análisis comparativos.
 
 Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
@@ -296,28 +296,28 @@ Ejemplo de utilidad: Ver productos con mayor importe total o los más vendidos.
 
 A continuación se exponen algunas mejoras y ampliaciones, implementadas en el contexto de la empresa de la empresa de GlobalMart Ldt.
 
-## 7.1- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
+- Como GlobalMart trabaja con productos sostenibles y ecológicos, se podría implementar la diferenciación de los productos certificados a través de un sistema que regustre esta información y pueda ser reutilizada.
 Para ello creamos una tabla llamada *“certificacionesEcologicas”* relacionadas con la tabla “producto”, por medio de la creación de una tabla llamada “producto-certificacion”, con una relación de muchos a muchos (N:M).
 
 ![tabla cerificacionEcologica](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cerificacionEcologica.png)
 
-## 7.2- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
+- En línea con los valores éticos de sostenibilidad de la empresa, podríamos registrar indicadores ecológicos de cada producto, como la huella de carbono estimada, reciclabilidad, etc. Esto aportaría transparencia y valor informativo a los clientes. 
 
 Para ello, creamos una tabla adicional de *“impactoAmbiental”*, que se relaciona con la tabla “producto”. Esto tiene una relación de uno a uno (N:N)
 
 ![Tabla Impacto Ambiental](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20impactoambiental.png)
 
-## 7.3- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
+- En la estructura de la base de datos de GlobalMart, los pedidos no están vinculados a ninguna persona o entidad compradora. Esto sería conveniente para futuras funcionalidades como por ejemplo reseñas por parte de clientes o fidelización a la hora de poder dar puntos de descuentos. Para ello, creamos la tabl*a “cliente”*.
 
 ![tabla cliente](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20cliente.png)
 
 
-## 7.4- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
+- Así mismo, hacemos una normalización, por medio de la eliminación de *“categoria”* de la tabla producto, para crear una nueva tabla aparte llamada “categoria”. De esta forma, evitamos la redundancia de datos y aseguramos una mayor consistencia, ya que cada categoría se almacena una sola vez y puede ser referenciada por múltiples productos. 
 Esto supone una relación entre categoria y producto de uno a muchos (N:N).
 
 ![tabla categoria](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_tabla%20categoria.png)
 
-## 7.5- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
+- Además de esta ampliación, se añade la mejora de la visualización sobre el control del stockage, para facilitar la reposición rápida e inmediata en caso de tener un stock bajo y que pueda comprometer el suministro de los pedidos demandados por los clientes.
 
 Para ello, la vista “vistaProductosBajoStock” se crea con el objetivo de facilitar la consulta rápida y eficiente de productos cuyo stock es bajo. 
 En este caso, hemos determinado que un stockage bajo significarán aquellos que tienen menos de 100 unidades disponibles en inventario.
