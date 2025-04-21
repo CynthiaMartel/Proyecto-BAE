@@ -318,7 +318,7 @@ En este caso, hemos determinado que un stockage bajo significarán aquellos que 
 
 ![vistaProductoBajoStock](https://raw.githubusercontent.com/CynthiaMartel/Proyecto-BAE/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/capturas/Captura_vistaProductoBajoStock.png)
 
- ##Modelo Relacional EER en MySQL Workbrench por ampliación
+ ## Modelo Relacional EER en MySQL Workbrench por ampliación
 
 Gracias a la implementación de esta ampliación, obtenemos el siguiente modelo relacional con las correspondientes modificaciones y añadidos, que podemos apreciar de manera gráfica en el EER de MySQL Workbrench:
 
