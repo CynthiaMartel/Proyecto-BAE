@@ -62,7 +62,7 @@ A modo de resumen, presentamos lo siguiente:
 
 - 🖼️ Archivo .pdf con el mismo contenido, pero presentado con un diseño visual y gráfico más elaborado, orientado a presentaciones o entregas formales
 
-## Estructura de la Base de Datos
+## Estructura de la Base de Datos 📚
 La base de datos contiene las siguientes tablas principales:
 
 - proveedor
