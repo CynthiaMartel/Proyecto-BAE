@@ -1,4 +1,4 @@
--- BASE DE DATOS GLOBALMART CON AMPLIACIÓN IMPLEMENTADA
+-- BASE DE DATOS GLOBALMART COMPLETA CON AMPLIACIÓN IMPLEMENTADA
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -172,16 +172,11 @@ CREATE TABLE IF NOT EXISTS `vistaproductosbajostock` (`nombreProducto` INT, `sto
 -- -----------------------------------------------------
 -- VIEW `vistaproductosbajostock`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `vistaproductosbajostock`;
-CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vistaproductosbajostock` AS
-SELECT 
-  p.nombre AS nombreProducto,
-  p.stock AS stock,
-  c.nombre AS categoria,
-  pr.nombre AS proveedor
+CREATE VIEW vistaProductosBajoStock AS
+SELECT p.nombre AS nombreProducto, p.stock, c.nombre AS categoria, pr.nombre AS proveedor
 FROM producto p
 JOIN categoria c ON p.idCategoria = c.idCategoria
-JOIN proveedor pr ON p.id_Proveedor = pr.idProveedor
+JOIN proveedor pr ON p.idProveedor = pr.idProveedor
 WHERE p.stock < 100;
 
 -- -----------------------------------------------------
@@ -194,9 +189,9 @@ CREATE TRIGGER trActualizarStockDespuesDePedido
 AFTER INSERT ON detallespedido
 FOR EACH ROW
 BEGIN
-  UPDATE producto
-  SET stock = stock - NEW.cantidadSolicitada
-  WHERE idProducto = NEW.id_Producto;
+UPDATE producto
+SET stock = stock - NEW.cantidadSolicitada
+WHERE idProducto = NEW.id_Producto;
 END;
 //
 
@@ -205,15 +200,15 @@ CREATE TRIGGER trPrevenirStockNegativo
 BEFORE INSERT ON detallespedido
 FOR EACH ROW
 BEGIN
-  DECLARE stockActual INT;
-  SELECT stock INTO stockActual
-  FROM producto
-  WHERE idProducto = NEW.id_Producto;
+DECLARE stockActual INT;
+SELECT stock INTO stockActual
+FROM producto
+WHERE idProducto = NEW.id_Producto;
 
-  IF NEW.cantidadSolicitada > stockActual THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'Error: No hay suficiente stock disponible para este producto.';
-  END IF;
+IF NEW.cantidadSolicitada > stockActual THEN
+SIGNAL SQLSTATE '45000'
+SET MESSAGE_TEXT = 'Error: No hay suficiente stock disponible para este producto.';
+END IF;
 END;
 //
 DELIMITER ;
@@ -221,16 +216,13 @@ DELIMITER ;
 -- -----------------------------------------------------
 -- VISTA: Resumen de ventas por cliente
 -- -----------------------------------------------------
-CREATE OR REPLACE VIEW vistaResumenComprasClientes AS
-SELECT 
-  cl.nombre AS nombreCliente,
-  COUNT(DISTINCT pe.idPedido) AS totalPedidos,
-  SUM(dp.cantidadSolicitada) AS totalProductos,
-  SUM(dp.cantidadSolicitada * p.precio) AS totalGastado
+CREATE VIEW vistaResumenComprasClientes AS
+SELECT cl.nombre AS nombreCliente, cl.apellido AS apellidoCliente,
+COUNT(dp.idDetallePedido) AS totalPedidos, SUM(dp.cantidadSolicitada) AS totalProductos, SUM(dp.cantidadSolicitada * p.precioVenta) AS totalGastado
 FROM cliente cl
 JOIN pedido pe ON cl.idCliente = pe.idCliente
-JOIN detallespedido dp ON pe.idPedido = dp.id_Pedido
-JOIN producto p ON dp.id_Producto = p.idProducto
+JOIN detallespedido dp ON pe.idPedido = dp.idPedido
+JOIN producto p ON dp.idProducto = p.idProducto
 GROUP BY cl.idCliente;
 
 -- Restaurar variables de entorno
