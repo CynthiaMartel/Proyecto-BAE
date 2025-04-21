@@ -20,7 +20,7 @@ Migración a la Nube: Aumentar la escalabilidad y disponibilidad del sistema.
 # Recursos 📝
 
 - https://dev.mysql.com/doc/
-- Scripts expuestos en la carpeta del repositorio de Github
+- Scripts expuestos en la carpeta del repositorio de Github : https://github.com/CynthiaMartel/Proyecto-BAE/tree/main/BASES%20DE%20DATOS%20%201%C2%BA%20DAM/PROYECTOS%20DE%20BASES%20DE%20DATOS/Proyecto_BAE-Cynthia-Martel/scripts
 
 
 
